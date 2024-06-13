@@ -1,45 +1,54 @@
-// Import the http module
+// Required modules
 const http = require("http");
-const fs = require("fs");
 
-// Create the server
+const routes = require("./routes.js");
+
+// Set up for the http server
 const server = http.createServer((request, response) => {
-  // Use a switch statement to handle different routes
+  let path = "./views/";
+
+  // The file path based on the route
   switch (request.url) {
-    case "/about":
-      console.log("Accessed the About page");
-      response.writeHead(200, { "Content-Type": "text/plain" });
-      response.write("Welcome to the About page");
-      break;
-    case "/contact":
-      console.log("Accessed the Contact page");
-      response.writeHead(200, { "Content-Type": "text/plain" });
-      response.write("Welcome to the Contact page");
-      break;
-    case "/products":
-      console.log("Accessed the Products page");
-      response.writeHead(200, { "Content-Type": "text/plain" });
-      response.write("Welcome to the Products page");
-      break;
     case "/":
-      console.log("Accessed the Home page");
-      response.writeHead(200, { "Content-Type": "text/plain" });
-      response.write("Welcome to the Home page");
+      path += "index.html";
+      response.statusCode = 200;
+      routes.indexPage(path, request.url, response);
+
       break;
+    case "/about":
+      path += "about.html";
+      response.statusCode = 200;
+      routes.aboutPage(path, request.url, response);
+      break;
+
+    case "/contact":
+      path += "contact.html";
+      response.statusCode = 200;
+      routes.contactPage(path, request.url, response);
+      break;
+
+    case "/products":
+      path += "products.html";
+      response.statusCode = 200;
+      routes.productsPage(path, request.url, response);
+      break;
+
     case "/subscribe":
-      console.log("Accessed the Subscribe page");
-      response.writeHead(200, { "Content-Type": "text/plain" });
-      response.write("Welcome to the Subscribe page");
+      path += "subscribe.html";
+      response.statusCode = 200;
+      routes.subscribePage(path, request.url, response);
       break;
+
     default:
-      console.log("Page not found");
-      response.writeHead(404, { "Content-Type": "text/plain" });
-      response.write("404 Page Not Found");
+      path += "404.html";
+      response.statusCode = 404;
+      routes.fourOfourPage(path, request.url, response);
+
       break;
   }
 });
 
 // Have the server listen on the correct port
 server.listen(3000, "localhost", () => {
-  console.log("listening on port 3000.");
+  console.log("Server is running on port 3000");
 });
