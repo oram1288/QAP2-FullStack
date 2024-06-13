@@ -49,6 +49,28 @@ function productsPage(path, event, response) {
   );
 }
 
+// this is the shoppingcart page
+function shoppingcartPage(path, event, response) {
+  displayFile(path, response);
+  myEmitter.emit(
+    "route",
+    event,
+    "information",
+    "the shoppingcart page was visited."
+  );
+}
+
+// this is the checkout page
+function checkoutPage(path, event, response) {
+  displayFile(path, response);
+  myEmitter.emit(
+    "route",
+    event,
+    "information",
+    "the checkout page was visited."
+  );
+}
+
 // this is the subscribe page
 function subscribePage(path, event, response) {
   displayFile(path, response);
@@ -137,6 +159,8 @@ module.exports = {
   aboutPage,
   contactPage,
   productsPage,
+  shoppingcartPage,
+  checkoutPage,
   subscribePage,
   fourOfourPage,
   asynchronous,

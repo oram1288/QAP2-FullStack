@@ -1,6 +1,6 @@
 // At first i tried to keep all the code on one .js file, got a bit messy, so then i decided
 // to do it the other way after finding the lecture code to have different js files like
-// (routes.js, logEvents, etc.). Figured i would still keep this .js file here fo my own use.
+// (routes.js, logEvents, etc.). Figured i would still keep this .js file here for myself.
 // The right file to run is 'index.js', not the 'index2.js'.
 
 // Required modules

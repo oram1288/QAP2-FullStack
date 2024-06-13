@@ -33,6 +33,18 @@ const server = http.createServer((request, response) => {
       routes.productsPage(path, request.url, response);
       break;
 
+    case "/shoppingcart":
+      path += "shoppingcart.html";
+      response.statusCode = 200;
+      routes.shoppingcartPage(path, request.url, response);
+      break;
+
+    case "/checkout":
+      path += "checkout.html";
+      response.statusCode = 200;
+      routes.checkoutPage(path, request.url, response);
+      break;
+
     case "/subscribe":
       path += "subscribe.html";
       response.statusCode = 200;

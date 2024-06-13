@@ -1,0 +1,80 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Page - QAP2</title>
+  </head>
+  <body>
+    <h1>Checkout Page</h1>
+    <h2>This site allows you to check out all your items!</h2>
+
+    <form action="./confirmation.html" method="get" id="submit">
+      <div>
+        <label for="name">Name: </label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input
+          type="text"
+          name="name"
+          id="name"
+          autofocus
+          autocomplete="given-name"
+          maxlength="30"
+          tabindex="1"
+        />
+      </div>
+      <br />
+      <div>
+        <label for="PhoneNumber">Phone Number:</label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input
+          type="Number"
+          id="Phone Number"
+          name="Phone Number"
+          tabindex="3"
+          list="list"
+        />
+      </div>
+      <br />
+      <div>
+        <label for="CardNum">Card Number: </label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input
+          type="Number"
+          name="Card Number"
+          id="Card Number"
+          autocomplete="Card Number"
+          tabindex="4"
+        />
+      </div>
+      <br />
+      <div>
+        <label for="date">Expire Date: </label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="date" name="date" id="date" tabindex="5" />
+      </div>
+      <br />
+      <div>
+        <label for="CVV">CVV: </label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input
+          type="Number"
+          name="CVV"
+          id="CVV"
+          autocomplete="CVV"
+          tabindex="6"
+        />
+      </div>
+      <br /><br /><br /><br />
+      <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="submit" value="Submit" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="reset" value="Clear" />
+      </div>
+    </form>
+  </body>
+</html>
